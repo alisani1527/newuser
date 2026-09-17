@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "soft-olive-accent": "#354733",
+        "on-secondary-container": "#78603e",
+        "surface-tint": "#536250",
+        "on-background": "#1c1c18",
+        "primary-fixed": "#d6e7d0",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "outline-variant": "#c4c8bf",
+        "background": "#fcf9f2",
+        "on-surface-variant": "#444842",
+        "on-secondary": "#ffffff",
+        "primary": "#283626",
+        "secondary-container": "#fedeb2",
+        "primary-container": "#354733",
+        "surface-container-high": "#ebe8e1",
+        "on-primary-container": "#fcf9f2",
+        "error-container": "#ffdad6",
+        "error": "#ba1a1a",
+        "on-tertiary-container": "#909f8b",
+        "secondary-fixed": "#fedeb2",
+        "surface-container": "#f1eee7",
+        "tertiary-fixed-dim": "#bccbb5",
+        "on-secondary-fixed-variant": "#584323",
+        "on-surface": "#1c1c18",
+        "tertiary-container": "#293626",
+        "surface": "#fcf9f2",
+        "on-tertiary-fixed": "#131e11",
+        "surface-container-highest": "#e5e2db",
+        "surface-container-low": "#f6f3ec",
+        "on-error": "#ffffff",
+        "muted-sage-border": "#D8D3C5",
+        "deep-forest-olive": "#1E281C",
+        "secondary": "#725b38",
+        "inverse-on-surface": "#f3f0e9",
+        "tertiary-fixed": "#d8e7d0",
+        "inverse-primary": "#bbcbb5",
+        "on-primary-fixed-variant": "#3c4b39",
+        "linen-parchment": "#EDE8DF",
+        "tertiary": "#283626",
+        "outline": "#747871",
+        "primary-fixed-dim": "#bbcbb5",
+        "surface-variant": "#e5e2db",
+        "ivory-cream-light": "#FAF8F5",
+        "surface-dim": "#dcdad3",
+        "on-primary": "#ffffff",
+        "on-secondary-fixed": "#281800",
+        "on-error-container": "#93000a",
+        "inverse-surface": "#31312c",
+        "on-tertiary-fixed-variant": "#3d4a3a",
+        "surface-bright": "#fcf9f2",
+        "antique-gold": "#B39366",
+        "on-primary-fixed": "#111f10",
+        "secondary-fixed-dim": "#e0c298"
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px"
+      },
+      spacing: {
+        "space-xl": "4.5rem",
+        gutter: "1.5rem",
+        "gutter-desktop": "2.5rem",
+        "gutter-mobile": "1rem",
+        "margin-mobile": "1.25rem",
+        "space-md": "1.5rem",
+        "space-sm": "0.75rem",
+        "space-lg": "2.5rem",
+        "margin-desktop": "5rem",
+        margin: "1.5rem",
+        "margin-tablet": "3rem",
+        "space-xs": "0.375rem"
+      },
+      fontFamily: {
+        "title-md": ["Plus Jakarta Sans"],
+        "headline-lg": ["Playfair Display"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "display-lg": ["Playfair Display"],
+        "display-lg-mobile": ["Playfair Display"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "headline-sm": ["Playfair Display"],
+        "headline-md": ["Playfair Display"],
+        "body-sm": ["Plus Jakarta Sans"],
+        "display-xl-mobile": ["Playfair Display"],
+        "display-xl": ["Playfair Display"],
+        "body-md": ["Plus Jakarta Sans"]
+      },
+      fontSize: {
+        "title-md": ["1.125rem", { lineHeight: "1.625rem", letterSpacing: "0.01em", fontWeight: "500" }],
+        "headline-lg": ["2.25rem", { lineHeight: "2.875rem", letterSpacing: "0.01em", fontWeight: "400" }],
+        "body-lg": ["1.0625rem", { lineHeight: "1.8rem", letterSpacing: "0.01em", fontWeight: "400" }],
+        "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.18em", fontWeight: "600" }],
+        "display-lg": ["3.25rem", { lineHeight: "3.75rem", letterSpacing: "-0.01em", fontWeight: "400" }],
+        "display-lg-mobile": ["2.125rem", { lineHeight: "2.625rem", letterSpacing: "0em", fontWeight: "400" }],
+        "label-sm": ["0.6875rem", { lineHeight: "0.875rem", letterSpacing: "0.22em", fontWeight: "600" }],
+        "headline-sm": ["1.375rem", { lineHeight: "1.875rem", letterSpacing: "0.02em", fontWeight: "500" }],
+        "headline-md": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "0.015em", fontWeight: "400" }],
+        "body-sm": ["0.8125rem", { lineHeight: "1.45rem", letterSpacing: "0.02em", fontWeight: "400" }],
+        "display-xl-mobile": ["2.75rem", { lineHeight: "3.25rem", letterSpacing: "-0.01em", fontWeight: "400" }],
+        "display-xl": ["4.5rem", { lineHeight: "5rem", letterSpacing: "-0.015em", fontWeight: "400" }],
+        "body-md": ["0.9375rem", { lineHeight: "1.6rem", letterSpacing: "0.015em", fontWeight: "400" }]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-[#FCF9F2] text-[#1C1C18] font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-[#FAF8F5]/90 backdrop-blur-xl border-b border-[#283626]/10 shadow-[0_1px_8px_rgba(40,54,38,0.06)]"><div class="h-20 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-3"><button aria-label="Navigation Menu" class="w-11 h-11 flex items-center justify-center text-primary hover:text-soft-olive-accent transition-colors duration-200"><span class="material-symbols-outlined text-[24px]">menu</span></button><a class="flex items-center" href="#"><img alt="ELYTH WEAR Official Logo" class="h-14 w-auto object-contain py-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAayoaUceBBVeL_JTmDcTWEYm2mpkvy8imL3eX70gvea54HSoODTJIw5tevx8NvxrPzfSJbvOlWdCb9qpTLGHNFnkCj7R5ZMyZzDvzDayusUOxDeuFJJYtgOD58Fza7cNaEOBrr4aE_GQIG9CSLuWdwQkwGXcqD1RRUJB8h-z_ZIE-g84BIf9k8z5DYBMez9d4mlarpm4z7iv_D9MQWQel07eg4YHHxkEEOfb1-VasbjFdLgGUqyMUCMoJ8prW46-APmg"/></a></div><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-widest text-[#283626] hidden xs:inline">Salon Flagship</span><div class="w-9 h-9 rounded-full bg-[#283626] flex items-center justify-center text-[#FCF9F2] shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 bg-[#FCF9F2]"><div class="flex flex-col w-full text-[#1C1C18]">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-[#FAF8F5]">
+<div class="relative w-full aspect-[4/5] max-h-[640px]">
+<img alt="Editorial portrait of modest black abaya featuring champagne-gold Zari needlework" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1UbkK_ncWfyJv-qTBojeNQuRNuri8QnNkkJDf1A6MesTgRDWifmfXRZJWJ_qVFMoNLaYGghc0n6tKAuyzJCXu9m0yktIc32g9M39RPTjHF_8XTpzPqCaGm09KTpehME4x2haqgy_f_5GY6aXjNeyTIVde3SYz-7yIGrkh3pAWuEzXzpg-CWYq74Abj4OnJA4oMWL0XrWk0e6tknbC7ro4HkP8oiCb8N5PbBc6UC4bbMvN7GBSRw0O4JhMM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-[#FAF8F5]/30 to-transparent"></div>
+<div class="absolute inset-x-0 bottom-0 p-margin-mobile flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-[#283626] font-semibold">ELYTH WEAR</span>
+<h1 class="font-headline-lg text-headline-lg text-[#1E281C] font-normal leading-tight">
+          The Art of Zari, Woven into Modesty.
+        </h1>
+<p class="font-body-sm text-body-sm text-[#444842] line-clamp-3 mt-1">
+          Discover elegant Abayas featuring thoughtfully designed Zari work, refined detailing and contemporary modest silhouettes.
+        </p>
+<div class="flex flex-col sm:flex-row gap-space-xs pt-space-sm w-full">
+<a class="w-full py-3.5 px-6 bg-[#283626] text-[#FCF9F2] font-label-md text-label-md uppercase tracking-wider text-center transition-colors hover:bg-[#354733] shadow-sm duration-200" href="#collection">
+            Explore Zari Collection
+          </a>
+<a class="w-full py-3.5 px-6 bg-[#FAF8F5] border border-[#283626]/30 text-[#283626] font-label-md text-label-md uppercase tracking-wider text-center transition-colors hover:bg-[#EDE8DF] duration-200" href="#about">
+            Discover ELYTH
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. INTRODUCTION TO ZARI -->
+<section class="w-full px-margin-mobile py-space-xl flex flex-col gap-space-md bg-[#FCF9F2] border-t border-[#283626]/10">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Craftsmanship Narrative</span>
+<h2 class="font-headline-md text-headline-md text-[#1E281C]">The Beauty of Zari</h2>
+<p class="font-body-md text-body-md text-[#444842] leading-relaxed">
+        Zari has long been associated with the artistry of traditional South Asian fashion. At ELYTH WEAR, we explore this intricate form of detailing through contemporary Abaya designs.
+      </p>
+</div>
+<!-- Macro Imagery Showcase -->
+<div class="relative w-full aspect-square rounded-none overflow-hidden bg-[#FAF8F5] border border-[#283626]/15 shadow-md">
+<img alt="Macro capture of intricate beaten metallic threadwork on crepe textile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VbUBqR_iqtiOVwsd9A4Y_FPFxKLnf1Fcsbnp-595XSeBTdRy3COEk-i1m1PU7ZO9oMVlKMHKNISERtovZ_1nspVfRZl8kxxbDOPoYsYugLiID0Xrbkrz6VBvLZyYtTfn_FMGSwVd-DjUYM7YEAL3yl-hoBNHwXye41S52WdvJBcO-ipoh2eSXzcKHMgyMZJ_TLLjQ8oIAPQLUT1nGW24MUwQH9yQZFoMe14RKD1ky8lHS-zdAG5T80Pw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1E281C]/85 via-transparent to-transparent flex items-end p-margin-mobile">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#FCF9F2]">Textile Architecture • Antique Threading</span>
+</div>
+</div>
+<!-- Craftsmanship Focus Badges -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#747871]">Key Detailing Disciplines</span>
+<div class="grid grid-cols-2 gap-2.5">
+<div class="p-3 bg-[#FAF8F5] border border-[#283626]/10 flex items-center gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[18px]">line_style</span>
+<span class="font-label-sm text-label-sm text-[#1C1C18]">Zari Borders</span>
+</div>
+<div class="p-3 bg-[#FAF8F5] border border-[#283626]/10 flex items-center gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[18px]">styler</span>
+<span class="font-label-sm text-label-sm text-[#1C1C18]">Sleeve Detailing</span>
+</div>
+<div class="p-3 bg-[#FAF8F5] border border-[#283626]/10 flex items-center gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[18px]">flare</span>
+<span class="font-label-sm text-label-sm text-[#1C1C18]">Neckline Detailing</span>
+</div>
+<div class="p-3 bg-[#FAF8F5] border border-[#283626]/10 flex items-center gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[18px]">view_column</span>
+<span class="font-label-sm text-label-sm text-[#1C1C18]">Front-Panel Work</span>
+</div>
+<div class="p-3 bg-[#FAF8F5] border border-[#283626]/10 flex items-center gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[18px]">arrow_back_ios_new</span>
+<span class="font-label-sm text-label-sm text-[#1C1C18]">Embellished Motifs</span>
+</div>
+<div class="p-3 bg-[#FAF8F5] border border-[#283626]/10 flex items-center gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[18px]">pattern</span>
+<span class="font-label-sm text-label-sm text-[#1C1C18]">Fine Patterns</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. THE ZARI COLLECTION -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FAF8F5] border-t border-[#283626]/10 flex flex-col gap-space-lg" id="collection">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Curated Series</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">The Zari Collection</h2>
+<p class="font-body-sm text-body-sm text-[#444842]">
+        A showcase of traditional detailing translated into contemporary modest silhouettes.
+      </p>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Card 1: Zari Borders -->
+<article class="bg-[#FFFFFF] border border-[#283626]/15 flex flex-col overflow-hidden shadow-sm">
+<div class="aspect-[3/4] w-full bg-[#EDE8DF] relative">
+<img class="w-full h-full object-cover" data-alt="Floor length black structured abaya with linear antique bronze zari borders along hemline and opening, standing in an architectural salon with warm ambient backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNBfJfp74IEaPTZ4eehKJ17rE1rmobG8ToVal6qbghfylaQPW-PrVAH8HidBblUsNQ8ntV5Twoz4fJt4siwrWmQH9dU4ix_Baa-1cAvn-be_73Gastd5p7HT_S3e_aWbVFeFbCV3UUuKFposPFR3UcdBa8luvjtlC23mcz3Awlzc0XnMVyoaUZv34L6BOIbnnGl3fBEIFUgP4E_toHvNaH_z_GUMTMqj_--6oijafNLnVW4bu8Rs--"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-[#FAF8F5]/95 border border-[#283626]/20 font-label-sm text-label-sm text-[#283626] font-semibold uppercase tracking-widest">Series 01</span>
+</div>
+<div class="p-margin-mobile flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-[#1E281C]">Zari Borders</h3>
+<p class="font-body-sm text-body-sm text-[#444842]">Abayas featuring refined decorative borders and edge detailing.</p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-[#283626] font-label-md text-label-md uppercase tracking-wider group" href="#inquiry">
+<span class="font-medium">Enquire Design</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2: Zari Motifs -->
+<article class="bg-[#FFFFFF] border border-[#283626]/15 flex flex-col overflow-hidden shadow-sm">
+<div class="aspect-[3/4] w-full bg-[#EDE8DF] relative">
+<img class="w-full h-full object-cover" data-alt="Side profile of flowing silhouette modest abaya with floral antique gold bullion embroidery motif on the shoulder and upper back, warm smoked lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzVvlehbDiBXkyJeXRoV9SCCfk-y5cs_LdG6mfej58Mk7ubLa4waXjkJuNSpUGlV1it97ulMqi4CCmPIiHHaeaLm7y_IB1-5iQ3quDNwvojG4FGb_-4W2047BWtclqyvjq_NyKTOGzK7D6D52z_QregSnusR_XEcRZ6Bacn5Zm5jjPOMmIHyidfKeTbvv3mE6DjTvwAPjqWa_WX8nH_CSPUnVc7dNlNxy1fuXN8xjLAYaUXvLmDqg7"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-[#FAF8F5]/95 border border-[#283626]/20 font-label-sm text-label-sm text-[#283626] font-semibold uppercase tracking-widest">Series 02</span>
+</div>
+<div class="p-margin-mobile flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-[#1E281C]">Zari Motifs</h3>
+<p class="font-body-sm text-body-sm text-[#444842]">Abayas featuring carefully placed decorative Zari motifs.</p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-[#283626] font-label-md text-label-md uppercase tracking-wider group" href="#inquiry">
+<span class="font-medium">Enquire Design</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3: Zari Front Panels -->
+<article class="bg-[#FFFFFF] border border-[#283626]/15 flex flex-col overflow-hidden shadow-sm">
+<div class="aspect-[3/4] w-full bg-[#EDE8DF] relative">
+<img alt="Full front view of modest luxury black abaya with elaborate central vertical placket zari detailing" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UbkK_ncWfyJv-qTBojeNQuRNuri8QnNkkJDf1A6MesTgRDWifmfXRZJWJ_qVFMoNLaYGghc0n6tKAuyzJCXu9m0yktIc32g9M39RPTjHF_8XTpzPqCaGm09KTpehME4x2haqgy_f_5GY6aXjNeyTIVde3SYz-7yIGrkh3pAWuEzXzpg-CWYq74Abj4OnJA4oMWL0XrWk0e6tknbC7ro4HkP8oiCb8N5PbBc6UC4bbMvN7GBSRw0O4JhMM"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-[#FAF8F5]/95 border border-[#283626]/20 font-label-sm text-label-sm text-[#283626] font-semibold uppercase tracking-widest">Series 03</span>
+</div>
+<div class="p-margin-mobile flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-[#1E281C]">Zari Front Panels</h3>
+<p class="font-body-sm text-body-sm text-[#444842]">Designs where Zari detailing creates a distinctive focal point along the front.</p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-[#283626] font-label-md text-label-md uppercase tracking-wider group" href="#inquiry">
+<span class="font-medium">Enquire Design</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 4: Zari Sleeves -->
+<article class="bg-[#FFFFFF] border border-[#283626]/15 flex flex-col overflow-hidden shadow-sm">
+<div class="aspect-[3/4] w-full bg-[#EDE8DF] relative">
+<img class="w-full h-full object-cover" data-alt="Elegant close up of modest abaya sleeve cuff with wide champagne metallic zari work against matte midnight crepe fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK_V3bD9yqHxIlHPoJGYEn6v_2L0XkIt3sQfhgWUtBX9V9sWKvueVZimlf0eeDny8hHka3thk-saljFEGPRaWYAcN94_kOmbJeuvvxkQz8Evno7_oZPVlKTSQ8ImDrC_ZupXajrd2oo365Y1yTnJU1st816IQUGsLPnsfqW1-8Hi6fvspQkwrnjPGvRdccUxBMOnNowINdX9C_IHOgMiL0lU1wRe4kjAgwFFqy0_flbY_HTNECUbLF"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-[#FAF8F5]/95 border border-[#283626]/20 font-label-sm text-label-sm text-[#283626] font-semibold uppercase tracking-widest">Series 04</span>
+</div>
+<div class="p-margin-mobile flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-[#1E281C]">Zari Sleeves</h3>
+<p class="font-body-sm text-body-sm text-[#444842]">Elegant sleeve designs enhanced with decorative Zari work.</p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-[#283626] font-label-md text-label-md uppercase tracking-wider group" href="#inquiry">
+<span class="font-medium">Enquire Design</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 5: Statement Zari -->
+<article class="bg-[#FFFFFF] border border-[#283626]/15 flex flex-col overflow-hidden shadow-sm">
+<div class="aspect-[3/4] w-full bg-[#EDE8DF] relative">
+<img class="w-full h-full object-cover" data-alt="Model in deep evening architectural salon wearing an opulent evening abaya with harmonious collar, bodice, and cuff zari composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0jOQgriQV2oZk2wm5km072fmKVIgFkYz3BryVeVRFW_MWNnWlVMnr6ka96ii5gAWLdb5VfDRCOWDLG0ZP6iR15Q1K1XzHtqSJLPadYCgApMxfCFzGBWgSBPRTgZm4DQHqeJt0cOFkktVrY21TNrjuVKKfTXrE_x1qOwmDq7zUjpDsKfRdu-1ChiqfuSTnIhP2hRgYT5m2dcRMqJz-BnQpz2qrtbA8qzgbzk-QWQ61KpPO0rHdQ1jm"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-[#FAF8F5]/95 border border-[#283626]/20 font-label-sm text-label-sm text-[#283626] font-semibold uppercase tracking-widest">Series 05</span>
+</div>
+<div class="p-margin-mobile flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-[#1E281C]">Statement Zari</h3>
+<p class="font-body-sm text-body-sm text-[#444842]">More elaborate designs intended for occasions where detailed craftsmanship takes centre stage.</p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-[#283626] font-label-md text-label-md uppercase tracking-wider group" href="#inquiry">
+<span class="font-medium">Enquire Design</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. ABAYA COLLECTION -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FCF9F2] border-t border-[#283626]/10 flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Silhouettes</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">Abayas by ELYTH</h2>
+<p class="font-body-sm text-body-sm text-[#444842]">
+        Explore how Zari detailing enhances diverse modest silhouettes.
+      </p>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Row 1 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/12 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-[#1E281C]">Everyday Abayas</h3>
+<span class="material-symbols-outlined text-[#283626] text-[18px]">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">Subtle accenting designed for daily grace and effortless modesty.</p>
+</div>
+<!-- Row 2 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/12 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-[#1E281C]">Minimal Zari</h3>
+<span class="material-symbols-outlined text-[#283626] text-[18px]">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">Discreet linear accents positioned along cuffs or quiet neckline bands.</p>
+</div>
+<!-- Row 3 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/12 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-[#1E281C]">Classic Zari</h3>
+<span class="material-symbols-outlined text-[#283626] text-[18px]">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">Timeless balanced borderwork honoring heritage modest proportions.</p>
+</div>
+<!-- Row 4 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/12 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-[#1E281C]">Detailed Zari</h3>
+<span class="material-symbols-outlined text-[#283626] text-[18px]">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">Structured motifs across wide sleeves and formal front plackets.</p>
+</div>
+<!-- Row 5 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/12 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-[#1E281C]">Occasion Abayas</h3>
+<span class="material-symbols-outlined text-[#283626] text-[18px]">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">Elevated compositions created specifically for evening and formal gatherings.</p>
+</div>
+<!-- Row 6 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/12 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-[#1E281C]">Statement Abayas</h3>
+<span class="material-symbols-outlined text-[#283626] text-[18px]">north_east</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">Commanding presence where expansive Zari arrangements take centre stage.</p>
+</div>
+</div>
+</section>
+<!-- 5. ZARI DETAIL — CLOSE UP -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FAF8F5] border-t border-[#283626]/10 flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Visual Inspection</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">Details Worth Looking Closer At</h2>
+<p class="font-body-sm text-body-sm text-[#444842]">
+        Inspect the interplay of metallic thread, rich drape, and geometric composition.
+      </p>
+</div>
+<!-- Macro Grid Gallery -->
+<div class="flex flex-col gap-space-sm">
+<div class="relative aspect-video w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img alt="High magnification macro photo of coiled golden thread embroidery" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VbUBqR_iqtiOVwsd9A4Y_FPFxKLnf1Fcsbnp-595XSeBTdRy3COEk-i1m1PU7ZO9oMVlKMHKNISERtovZ_1nspVfRZl8kxxbDOPoYsYugLiID0Xrbkrz6VBvLZyYtTfn_FMGSwVd-DjUYM7YEAL3yl-hoBNHwXye41S52WdvJBcO-ipoh2eSXzcKHMgyMZJ_TLLjQ8oIAPQLUT1nGW24MUwQH9yQZFoMe14RKD1ky8lHS-zdAG5T80Pw"/>
+<div class="absolute bottom-2 left-2 bg-[#FAF8F5]/95 border border-[#283626]/15 px-3 py-1 font-label-sm text-label-sm text-[#283626] tracking-wider uppercase font-semibold">
+          Border Detail
+        </div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Macro detail of bell sleeve cuff embroidered with geometric traditional zari thread in antique brass shades" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyRhbTXN2xnibo0NkS4pbT0svEkAcf1FFRQoOumyQdX8EG7-UAfCUtpzW50MGMEOuvzMIItxVmWyOtwYfqeTu4JGHfok9UEcSKX555WSXTS08yzTEvwJqupoVsCEq-lTw8nzuAYXxOcK5MlEuKflcvnuhaBfaY5yEGmg77CZGFpMVrbX1v9sf44lJ2GBbUlkZ5J6EKnfU_kwekXGMYi5oSD6hwlKHyXrcH1xqF6mnt-WLexWLneZdK"/>
+<div class="absolute bottom-2 left-2 bg-[#FAF8F5]/95 border border-[#283626]/15 px-2 py-1 font-label-sm text-label-sm text-[#283626] tracking-wider uppercase font-semibold">
+            Sleeve Detail
+          </div>
+</div>
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Vertical macro texture of front abaya panel showing metallic corded embroidery on fine matte crepe fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3ySXjRqIJSGjq9qE_D4LxnIj9tborUVbWEu2y2RRoGAvQzV5qMAQuwqPaeym8rnBhKNRDkVqmH_xT7mnqGLnd_U8hSAX6PkWNMBQkIsXnRphGKcTJbzNThtfniukhoB10u4lVKOfi84p5d-9cVD7rSsqWOOCvpjbY5GmNzMNHG49kaLH16k7BiXp80e9luWcVHOiR9Bf8pepB_UbMQ1w7sQLfCjivcTs7ZDLIT2jL_ZAtRnTXPGrA"/>
+<div class="absolute bottom-2 left-2 bg-[#FAF8F5]/95 border border-[#283626]/15 px-2 py-1 font-label-sm text-label-sm text-[#283626] tracking-wider uppercase font-semibold">
+            Front Panel
+          </div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Floral medallion motif woven with antique champagne zari wire thread on deep obsidian black cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMWxonskjI8dKplLIyXq3oFh5Pu7jBLJi3XqkbGrkCYI2kibaODGq9WbiafIVGLcxy4wSJxwSXwC5WbEpNSAyxArClGRJ6i0arSIJOl1hJQCgc2x_pDxJVcha51zxQVvwdGkI1zScm7EuLHELDU3BVw8oOoUUp6ECdcfkS9_XjFwd809xUGiTF7kjbGp8pvquYT63DudxUDdSW-dF1NW36q2yNOEeLQpu2MvsZ1Q8wqyHXuUioxG3k"/>
+<div class="absolute bottom-2 left-2 bg-[#FAF8F5]/95 border border-[#283626]/15 px-2 py-1 font-label-sm text-label-sm text-[#283626] tracking-wider uppercase font-semibold">
+            Embellished Motif
+          </div>
+</div>
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Extreme close up of fluid crepe weave drape meeting structured zari border trim under salon studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMcXB0gQ4C5w4StRMUGkL8KfJQ7iYnklywn-6ia1he1jVMcNbHtDqPRBuYm4t00_zMH0yOOMvIwPsdbiGicyOWvuH0PczmTdMUlzP7A6Y4Ga9fsJ76iFVF3lMzV0cbmL703NHHsfMbFFi6RmebzfTeOUHuDUc-fpzx_e3siyO7LZNKLOyS6VnQT2YfGCTXtfSWlBDkG_W7r98S1fkutnfO5lxqxzT971pBbVT_fYHjXHOp9weTKcRf"/>
+<div class="absolute bottom-2 left-2 bg-[#FAF8F5]/95 border border-[#283626]/15 px-2 py-1 font-label-sm text-label-sm text-[#283626] tracking-wider uppercase font-semibold">
+            Fabric &amp; Zari Harmony
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. ZARI SPECTRUM -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FCF9F2] border-t border-[#283626]/10 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Harmonic Scales</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">A Spectrum of Zari</h2>
+<p class="font-body-sm text-body-sm text-[#444842]">
+        From discreet accents to prominent focal points, explore our four levels of detailing.
+      </p>
+</div>
+<!-- 4 Tiers -->
+<div class="flex flex-col gap-space-sm">
+<!-- Tier 1 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/15 flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#283626] font-semibold">Level 01</span>
+<span class="font-headline-sm text-headline-sm text-[#1E281C]">Subtle</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">
+          Minimal Zari accents for an understated look.
+        </p>
+</div>
+<!-- Tier 2 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/15 flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#283626] font-semibold">Level 02</span>
+<span class="font-headline-sm text-headline-sm text-[#1E281C]">Defined</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">
+          More visible borders and selected decorative detailing.
+        </p>
+</div>
+<!-- Tier 3 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/15 flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#283626] font-semibold">Level 03</span>
+<span class="font-headline-sm text-headline-sm text-[#1E281C]">Intricate</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">
+          Greater coverage with more elaborate patterns.
+        </p>
+</div>
+<!-- Tier 4 -->
+<div class="p-margin-mobile bg-[#FAF8F5] border border-[#283626]/15 flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#283626] font-semibold">Level 04</span>
+<span class="font-headline-sm text-headline-sm text-[#1E281C]">Statement</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#444842]">
+          Prominent Zari work designed to become the main visual feature of the Abaya.
+        </p>
+</div>
+</div>
+</section>
+<!-- 7. CRAFT & DESIGN -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FAF8F5] border-t border-[#283626]/10 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Design Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">Designed Around the Detail</h2>
+<p class="font-body-sm text-body-sm text-[#444842]">
+        Every silhouette is composed through a rigorous study of balance, ensuring metallic accents complement the flow of modest tailoring.
+      </p>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="p-4 bg-[#FFFFFF] border border-[#283626]/15 flex gap-4 items-start shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[22px] mt-0.5">architecture</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-[#1E281C]">Abaya Silhouette</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Architectural drapery calculated to preserve pure volume and comfort.</span>
+</div>
+</div>
+<div class="p-4 bg-[#FFFFFF] border border-[#283626]/15 flex gap-4 items-start shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[22px] mt-0.5">texture</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-[#1E281C]">Fabric Drape &amp; Texture</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Matte crepes and fluid silks selected to contrast with metallic sheen.</span>
+</div>
+</div>
+<div class="p-4 bg-[#FFFFFF] border border-[#283626]/15 flex gap-4 items-start shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[22px] mt-0.5">straighten</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-[#1E281C]">Zari Placement</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Measured positioning along body axes to accentuate modest proportions.</span>
+</div>
+</div>
+<div class="p-4 bg-[#FFFFFF] border border-[#283626]/15 flex gap-4 items-start shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[22px] mt-0.5">aspect_ratio</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-[#1E281C]">Border Proportions</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Carefully scaled margins ensuring trims never overwhelm the garment hem.</span>
+</div>
+</div>
+<div class="p-4 bg-[#FFFFFF] border border-[#283626]/15 flex gap-4 items-start shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[22px] mt-0.5">adjust</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-[#1E281C]">Motifs &amp; Symmetry</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Deliberate ornamental focal points aligned to natural focal centers.</span>
+</div>
+</div>
+<div class="p-4 bg-[#FFFFFF] border border-[#283626]/15 flex gap-4 items-start shadow-sm">
+<span class="material-symbols-outlined text-[#283626] text-[22px] mt-0.5">tune</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-[#1E281C]">Sleeve &amp; Neckline Balance</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Symmetrical equilibrium between collar detailing and cuff finishes.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. LOOKBOOK -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FCF9F2] border-t border-[#283626]/10 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Visual Chronicle</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">The Editorial Lookbook</h2>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Lookbook 1: Featured Portrait -->
+<div class="flex flex-col gap-2">
+<div class="aspect-[4/5] w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img alt="Editorial lookbook presentation of ELYTH modest abaya with neckline zari artwork" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UbkK_ncWfyJv-qTBojeNQuRNuri8QnNkkJDf1A6MesTgRDWifmfXRZJWJ_qVFMoNLaYGghc0n6tKAuyzJCXu9m0yktIc32g9M39RPTjHF_8XTpzPqCaGm09KTpehME4x2haqgy_f_5GY6aXjNeyTIVde3SYz-7yIGrkh3pAWuEzXzpg-CWYq74Abj4OnJA4oMWL0XrWk0e6tknbC7ro4HkP8oiCb8N5PbBc6UC4bbMvN7GBSRw0O4JhMM"/>
+</div>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-headline-sm text-headline-sm text-[#1E281C]">Placket Ornamentation</span>
+<span class="font-label-sm text-label-sm text-[#747871] uppercase tracking-wider font-medium">Look 01</span>
+</div>
+</div>
+<!-- Lookbook 2: Detail Macro -->
+<div class="flex flex-col gap-2">
+<div class="aspect-[4/5] w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img alt="Detailed lookbook close-up of intricate antique metallic embroidery stitch" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VbUBqR_iqtiOVwsd9A4Y_FPFxKLnf1Fcsbnp-595XSeBTdRy3COEk-i1m1PU7ZO9oMVlKMHKNISERtovZ_1nspVfRZl8kxxbDOPoYsYugLiID0Xrbkrz6VBvLZyYtTfn_FMGSwVd-DjUYM7YEAL3yl-hoBNHwXye41S52WdvJBcO-ipoh2eSXzcKHMgyMZJ_TLLjQ8oIAPQLUT1nGW24MUwQH9yQZFoMe14RKD1ky8lHS-zdAG5T80Pw"/>
+</div>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-headline-sm text-headline-sm text-[#1E281C]">Needlepoint Detail</span>
+<span class="font-label-sm text-label-sm text-[#747871] uppercase tracking-wider font-medium">Look 02</span>
+</div>
+</div>
+<!-- Lookbook 3: Full Length Silhouette -->
+<div class="flex flex-col gap-2">
+<div class="aspect-[4/5] w-full overflow-hidden bg-[#EDE8DF] border border-[#283626]/15 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Dramatic editorial shot of model in flowing obsidian black abaya with champagne bronze zari hemlines walking through modern stone corridor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh95uRMB5UpAiWh0_Z0jPUrlxD9MMPJ5-q7WI4a213ZB6Yolw4zTmXzKUmNhVHzGMaRDKjIbUxDu3iZ8WC0TJulyLZNcgZiKVIZLeNwSxTjN7IZBW5XY6WA8eQ71RVFQ75gcWQFbfWaRZilH9VTxfgKU9l8yhack663qnux2ZgNPhy81tBUqe30Twmv-QTsewmTD4MFBm7co4beLyOHMOll8Ag-SYuQ2fnjVLZIg_Ekqx1ylaGRc2w"/>
+</div>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-headline-sm text-headline-sm text-[#1E281C]">Draped Motion</span>
+<span class="font-label-sm text-label-sm text-[#747871] uppercase tracking-wider font-medium">Look 03</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. ABOUT ELYTH -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FAF8F5] border-t border-[#283626]/10 flex flex-col gap-space-md" id="about">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Maison &amp; Vision</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">About ELYTH</h2>
+</div>
+<div class="p-margin-mobile bg-[#FCF9F2] border border-[#283626]/15 flex flex-col gap-space-sm shadow-sm">
+<p class="font-body-lg text-body-lg text-[#1C1C18] leading-relaxed">
+        ELYTH WEAR is a women's fashion brand focused on Abayas and modest wear, with Zari work at the heart of its design language. The brand explores traditional decorative techniques through contemporary silhouettes and carefully considered detailing.
+      </p>
+<div class="flex items-center gap-2 pt-2 text-[#283626] font-label-sm text-label-sm uppercase tracking-widest font-semibold">
+<span class="w-6 h-[1px] bg-[#283626]"></span>
+<span>Modesty • Geometry • Detailing</span>
+</div>
+</div>
+</section>
+<!-- 10. INQUIRY -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FCF9F2] border-t border-[#283626]/10 flex flex-col gap-space-lg" id="inquiry">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Direct Inquiry</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">Discover an ELYTH Design</h2>
+<p class="font-body-sm text-body-sm text-[#444842]">
+        Interested in a design or looking for more information about our Zari Abayas? Get in touch with ELYTH WEAR.
+      </p>
+</div>
+<!-- Inquiry Form -->
+<form class="flex flex-col gap-4" id="elythInquiryForm" onsubmit="event.preventDefault(); document.getElementById('inquiryNotice').classList.remove('hidden');">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-[#444842] font-semibold" for="name">Full Name</label>
+<input class="w-full p-3.5 bg-[#FAF8F5] border border-[#283626]/20 text-[#1C1C18] font-body-md text-body-md outline-none focus:border-[#283626] focus:bg-[#FFFFFF] transition-colors duration-200" id="name" placeholder="Enter your full name" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-[#444842] font-semibold" for="email">Email Address</label>
+<input class="w-full p-3.5 bg-[#FAF8F5] border border-[#283626]/20 text-[#1C1C18] font-body-md text-body-md outline-none focus:border-[#283626] focus:bg-[#FFFFFF] transition-colors duration-200" id="email" placeholder="name@example.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-[#444842] font-semibold" for="phone">Phone / WhatsApp</label>
+<input class="w-full p-3.5 bg-[#FAF8F5] border border-[#283626]/20 text-[#1C1C18] font-body-md text-body-md outline-none focus:border-[#283626] focus:bg-[#FFFFFF] transition-colors duration-200" id="phone" placeholder="+00 000 000 0000" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-[#444842] font-semibold" for="message">Message / Design of Interest</label>
+<textarea class="w-full p-3.5 bg-[#FAF8F5] border border-[#283626]/20 text-[#1C1C18] font-body-md text-body-md outline-none focus:border-[#283626] focus:bg-[#FFFFFF] transition-colors duration-200 resize-none" id="message" placeholder="Specify the collection series, motif category, or general styling enquiry..." required="" rows="4"></textarea>
+</div>
+<button class="w-full py-3.5 px-6 bg-[#283626] text-[#FCF9F2] font-label-md text-label-md uppercase tracking-wider text-center transition-colors hover:bg-[#354733] duration-200 mt-2 shadow-sm font-semibold" type="submit">
+        Send Inquiry
+      </button>
+<!-- Feedback Banner (Hidden by default) -->
+<div class="hidden p-3 bg-[#FAF8F5] border border-[#283626]/30 text-[#283626] font-body-sm text-body-sm" id="inquiryNotice">
+        Thank you. Your inquiry has been received by our concierge.
+      </div>
+<!-- Mandatory Disclaimer -->
+<p class="font-body-sm text-body-sm text-[#747871] leading-relaxed pt-1">
+        Submitting this form is an enquiry only and does not constitute an order or purchase.
+      </p>
+</form>
+</section>
+<!-- 11. CONTACT & SOCIAL -->
+<section class="w-full px-margin-mobile py-space-xl bg-[#FAF8F5] border-t border-[#283626]/10 flex flex-col gap-space-lg" id="contact">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#283626] font-semibold">Direct Communication</span>
+<h2 class="font-headline-lg text-headline-lg text-[#1E281C]">Connect with ELYTH</h2>
+<p class="font-body-sm text-body-sm text-[#444842]">
+        Our concierge is available across verified channels to provide silhouette guidance and detailing information.
+      </p>
+</div>
+<div class="flex flex-col gap-3">
+<!-- WhatsApp -->
+<a class="p-margin-mobile bg-[#FCF9F2] border border-[#283626]/15 flex items-center justify-between transition-colors hover:bg-[#EDE8DF] shadow-sm" href="#inquiry">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#283626] text-[24px]">chat</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-[#1E281C]">WhatsApp Concierge</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Private styling &amp; enquiry assistance</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#747871] text-[18px]">arrow_forward</span>
+</a>
+<!-- Instagram Editorial -->
+<a class="p-margin-mobile bg-[#FCF9F2] border border-[#283626]/15 flex items-center justify-between transition-colors hover:bg-[#EDE8DF] shadow-sm" href="#inquiry">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#283626] text-[24px]">photo_camera</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-[#1E281C]">Instagram Editorial</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Lookbook updates &amp; visual journal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#747871] text-[18px]">arrow_forward</span>
+</a>
+<!-- Email Correspondence -->
+<a class="p-margin-mobile bg-[#FCF9F2] border border-[#283626]/15 flex items-center justify-between transition-colors hover:bg-[#EDE8DF] shadow-sm" href="#inquiry">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#283626] text-[24px]">mail</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-[#1E281C]">Email Correspondence</span>
+<span class="font-body-sm text-body-sm text-[#444842]">Direct editorial inquiries</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#747871] text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 12. BRAND FOOTNOTE / ACCENT STRIP -->
+<section class="w-full px-margin-mobile py-space-lg bg-[#FCF9F2] border-t border-[#283626]/10 flex flex-col gap-space-xs text-center items-center">
+<span class="font-headline-md text-headline-md uppercase tracking-widest text-[#283626]">ELYTH WEAR</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-[#444842]">Zari • Abayas • Modest Wear</span>
+<p class="font-headline-sm text-headline-sm italic text-[#283626] pt-2 max-w-xs">
+      “The Art of Zari, Woven into Modesty.”
+    </p>
+<div class="flex flex-wrap justify-center gap-x-4 gap-y-2 pt-4 font-label-sm text-label-sm uppercase tracking-wider text-[#725b38]">
+<a class="hover:text-[#283626] transition-colors" href="#">Home</a>
+<a class="hover:text-[#283626] transition-colors" href="#collection">Zari Collection</a>
+<a class="hover:text-[#283626] transition-colors" href="#collection">Abayas</a>
+<a class="hover:text-[#283626] transition-colors" href="#about">About</a>
+<a class="hover:text-[#283626] transition-colors" href="#inquiry">Contact</a>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-[#747871] tracking-widest pt-4">
+      © 2026 ELYTH WEAR. All rights reserved.
+    </span>
+</section>
+</div>
+<script>
+  // Smooth scroll handler for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script><footer class="w-full bg-[#FAF8F5] border-t border-[#283626]/15 px-margin-mobile pt-space-lg pb-space-xl flex flex-col gap-space-md mt-space-lg"><div class="flex flex-col items-start gap-space-sm"><div class="p-2.5 bg-white border border-[#283626]/15 shadow-sm inline-block"><img alt="ELYTH WEAR Official Logo" class="h-14 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN55YKn8PDo_Mc0TnV__T9scvhAtk0McP6g9tnMNBfcDANRmD-1UnA5YzYy0LMRuv8WU-keC8D7NS7eL8w11PcUPHxxWalQY85uiaaZ0mmOcaJA4w52Y9geAMhX5aBBA6HSxyRlz9Be23gKEsPjTzkMK4_9ZYaKXJS84PxeAqkSGrmW7mWEKWJvtC5MDyixxhoZex4gII-s-_zg4v15Zdc-hrcZdEsn3rxWZwINAPtYN4XiAFWN-b1SauwG_vJ3tp9nw"/></div><p class="font-body-sm text-body-sm text-[#444842] max-w-sm">Haute couture modest drapery, architectural silhouettes, and bespoke antique Zari craftsmanship. Al Amerat, Oman.</p></div><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-label-sm text-label-sm uppercase tracking-widest text-[#283626] font-semibold"><a class="hover:text-soft-olive-accent transition-colors" data-path="salon-flagship" href="#">Home</a><a class="hover:text-soft-olive-accent transition-colors" data-path="zari-collection" href="#collection">Zari Collection</a><a class="hover:text-soft-olive-accent transition-colors" data-path="abayas-gallery" href="#collection">Abayas</a><a class="hover:text-soft-olive-accent transition-colors" data-path="about-atelier" href="#about">About</a><a class="hover:text-soft-olive-accent transition-colors" data-path="bespoke-concierge" href="#inquiry">Contact</a></div><div class="flex flex-col gap-space-xs pt-space-xs border-t border-[#283626]/10"><p class="font-label-sm text-label-sm uppercase text-[#747871] tracking-widest">© 2026 ELYTH WEAR. All rights reserved.</p></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#FAF8F5]/95 backdrop-blur-xl border-t border-[#283626]/15 shadow-[0_-4px_20px_rgba(40,54,38,0.08)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-xs flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 transition-colors duration-200 gap-1 text-[#283626] font-semibold" data-path="salon-flagship" href="#"><span class="material-symbols-outlined text-[20px]">chair</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#444842] hover:text-[#283626] transition-colors duration-200 gap-1" data-path="zari-collection" href="#collection"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Zari</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#444842] hover:text-[#283626] transition-colors duration-200 gap-1" data-path="abayas-gallery" href="#collection"><span class="material-symbols-outlined text-[20px]">styler</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Abayas</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#444842] hover:text-[#283626] transition-colors duration-200 gap-1" data-path="about-atelier" href="#about"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-sm text-label-sm uppercase tracking-wider">About</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#444842] hover:text-[#283626] transition-colors duration-200 gap-1" data-path="bespoke-concierge" href="#inquiry"><span class="material-symbols-outlined text-[20px]">mail</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Contact</span></a></div></nav>
+</body></html>

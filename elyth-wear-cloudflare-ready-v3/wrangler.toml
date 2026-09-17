@@ -1,0 +1,6 @@
+name = "elyth-wear"
+compatibility_date = "2026-09-17"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
